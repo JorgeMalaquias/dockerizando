@@ -2,10 +2,12 @@ FROM node
 
 WORKDIR /usr/src
 
-COPY ..
+COPY . .
 
 EXPOSE 5000
 
 RUN npm i
 
-CMD ["node","index.ts"]
+CMD ["tsc"]
+
+CMD ["node","dist/index.js"]
